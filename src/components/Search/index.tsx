@@ -1,11 +1,15 @@
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { ProductsContext } from '../../context/ProductsProvider';
 import { getProduct } from '../../helpers/productsAPI';
 import * as Styled from './styles';
 
 const Search = () => {
-  const { setProducts, setLoading } = useContext(ProductsContext);
-  const [query, setQuery] = useState<string>('');
+  const {
+    setProducts,
+    setLoading,
+    query,
+    setQuery,
+  } = useContext(ProductsContext);
 
   const searchFor = async (event: any, query: string) => {
     event.preventDefault();

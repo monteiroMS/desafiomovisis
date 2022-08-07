@@ -24,4 +24,6 @@ export type ProductContextType = {
   setProducts: (newState: Product[]) => void,
   loading: Boolean,
   setLoading: (newState: Boolean) => void,
+  query: string,
+  setQuery: (newState: string) => void,
 };

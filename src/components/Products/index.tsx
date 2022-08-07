@@ -6,7 +6,7 @@ import ProductCard from '../ProductCard';
 import * as Styled from './styles';
 
 const Products = () => {
-  const { products, loading } = useContext(ProductsContext);
+  const { products, loading, query } = useContext(ProductsContext);
 
   if (loading) return <Loading />;
 
@@ -20,14 +20,17 @@ const Products = () => {
 
   return (
     <Styled.Container>
-      { products.map(({ id, name, price, img }: Product) => (
-        <ProductCard
-          key={ id }
-          name={ name }
-          price={ price }
-          img={ img }
-        />
-      )) }
+      <h1>{ `Exibindo resultados para sua busca por: ${query}` }</h1>
+      <div>{
+        products.map(({ id, name, price, img }: Product) => (
+          <ProductCard
+            key={ id }
+            name={ name }
+            price={ price }
+            img={ img }
+          />
+        ))
+      }</div>
     </Styled.Container>
   );
 };

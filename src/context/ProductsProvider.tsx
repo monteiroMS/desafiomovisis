@@ -12,6 +12,8 @@ const INITIAL_VALUE = {
   setProducts: () => {},
   loading: false,
   setLoading: () => {},
+  query: '',
+  setQuery: () => {},
 };
 
 export const ProductsContext = createContext<ProductContextType>(INITIAL_VALUE);
@@ -19,11 +21,14 @@ export const ProductsContext = createContext<ProductContextType>(INITIAL_VALUE);
 const ProductsProvider = ({ children }: ReactChildren) => {
   const STATE_INITIAL_VALUE = INITIAL_VALUE.products;
   const [products, setProducts] = useState<Product[]>(STATE_INITIAL_VALUE);
+  const [query, setQuery] = useState<string>('');
   const [loading, setLoading] = useState<Boolean>(false);
 
   const contextValue = {
     products,
     setProducts,
+    query,
+    setQuery,
     loading,
     setLoading,
   };
