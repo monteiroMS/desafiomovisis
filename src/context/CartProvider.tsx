@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { createContext } from 'react';
+import { useState, createContext } from 'react';
 import { Product, ReactChildren } from '../helpers/types';
 
 const INITIAL_VALUE = {};

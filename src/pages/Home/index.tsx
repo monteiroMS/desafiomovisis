@@ -1,9 +1,20 @@
-import React from 'react';
+import Filters from '../../components/Filters';
+import Header from '../../components/Header';
+import Search from '../../components/Search';
 import * as Styled from './styles';
 
 const Home = () => {
   return (
-    <Styled.P>Esta é a página principal</Styled.P>
+    <Styled.Container>
+      <Header />
+      <span className="principal-container">
+        <Filters />
+        <main>
+          <Search />
+          <p>PRODUTOS</p>
+        </main>
+      </span>
+    </Styled.Container>
   );
 };
 
