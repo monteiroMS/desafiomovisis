@@ -27,3 +27,8 @@ export type ProductContextType = {
   query: string,
   setQuery: (newState: string) => void,
 };
+
+export type FiltersType = {
+  from: string,
+  until: string,
+};

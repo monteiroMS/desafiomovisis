@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { Product, ProductContextType, ReactChildren } from '../helpers/types';
+import { FiltersType, Product, ProductContextType, ReactChildren } from '../helpers/types';
 
 const INITIAL_VALUE = {
   products: [{
@@ -14,15 +14,17 @@ const INITIAL_VALUE = {
   setLoading: () => {},
   query: '',
   setQuery: () => {},
+  filters: { from: '0', until: '0' },
+  setFilters: () => {},
 };
 
 export const ProductsContext = createContext<ProductContextType>(INITIAL_VALUE);
 
 const ProductsProvider = ({ children }: ReactChildren) => {
-  const STATE_INITIAL_VALUE = INITIAL_VALUE.products;
-  const [products, setProducts] = useState<Product[]>(STATE_INITIAL_VALUE);
-  const [query, setQuery] = useState<string>('');
-  const [loading, setLoading] = useState<Boolean>(false);
+  const [products, setProducts] = useState<Product[]>(INITIAL_VALUE.products);
+  const [query, setQuery] = useState<string>(INITIAL_VALUE.query);
+  const [loading, setLoading] = useState<Boolean>(INITIAL_VALUE.loading);
+  const [filters, setFilters] = useState<FiltersType>(INITIAL_VALUE.filters);
 
   const contextValue = {
     products,
@@ -31,6 +33,8 @@ const ProductsProvider = ({ children }: ReactChildren) => {
     setQuery,
     loading,
     setLoading,
+    filters,
+    setFilters,
   };
 
   return (

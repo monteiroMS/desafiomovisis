@@ -21,7 +21,7 @@ const Products = () => {
   return (
     <Styled.Container>
       <h1>{ `Exibindo resultados para sua busca por: ${query}` }</h1>
-      <div>{
+      <div className="product-cards-container">{
         products.map(({ id, name, price, img }: Product) => (
           <ProductCard
             key={ id }

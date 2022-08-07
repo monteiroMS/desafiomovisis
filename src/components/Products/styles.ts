@@ -9,12 +9,12 @@ export const Container = styled.div`
     margin-left: 20px;
   }
 
-  div {
+  .product-cards-container {
     border: 1px solid black;
+    height: 100%;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    // gap: 20px;
     justify-content: space-evenly;
   }
 `;
