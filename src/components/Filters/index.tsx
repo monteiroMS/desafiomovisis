@@ -3,7 +3,7 @@ import * as Styled from './styles';
 const Filters = () => {
   return (
     <Styled.Container>
-      <h1>Filtros</h1>
+      <h2>Filtros</h2>
       <p>Preço</p>
       <p>Ordenar</p>
     </Styled.Container>

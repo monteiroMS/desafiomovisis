@@ -3,7 +3,7 @@ import { Product, ReactChildren } from '../helpers/types';
 
 const INITIAL_VALUE = {};
 
-const CartContext = createContext(INITIAL_VALUE);
+export const CartContext = createContext(INITIAL_VALUE);
 
 const CartProvider = ({ children }: ReactChildren) => {
   const [cart, setCart] = useState<Product[]>([]);

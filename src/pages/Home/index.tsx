@@ -1,5 +1,6 @@
 import Filters from '../../components/Filters';
 import Header from '../../components/Header';
+import Products from '../../components/Products';
 import Search from '../../components/Search';
 import * as Styled from './styles';
 
@@ -11,7 +12,7 @@ const Home = () => {
         <Filters />
         <main>
           <Search />
-          <p>PRODUTOS</p>
+          <Products />
         </main>
       </span>
     </Styled.Container>
