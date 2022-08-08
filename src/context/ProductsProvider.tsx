@@ -4,7 +4,7 @@ import { PriceFiltersType, Product, ProductContextType, ReactChildren } from '..
 const INITIAL_VALUE = {
   products: [{
     id: '0',
-    name: 'Digite na barra de busca o produto que você procura',
+    name: '',
     entryDate: new Date(),
     img: '',
     price: 0,

@@ -12,11 +12,18 @@ export type Product = {
   img: string,
 }
 
-export type ProductCardType = {
-  key: string,
+export type InCartProduct = {
+  id: string,
   name: string,
   price: number,
+  entryDate: Date,
   img: string,
+  quantity: number,
+}
+
+export type ProductPropType = {
+  key: string,
+  product: Product,
 }
 
 export type ProductContextType = {
@@ -26,6 +33,11 @@ export type ProductContextType = {
   setLoading: (newState: Boolean) => void,
   query: string,
   setQuery: (newState: string) => void,
+};
+
+export type CartContextType = {
+  cart: InCartProduct[],
+  setCart: (newState: InCartProduct[]) => void,
 };
 
 export type PriceFiltersType = {

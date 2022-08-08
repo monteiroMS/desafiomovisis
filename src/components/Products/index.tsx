@@ -22,12 +22,10 @@ const Products = () => {
     <Styled.Container>
       <h1>{ `Exibindo resultados para sua busca por: ${query}` }</h1>
       <div className="product-cards-container">{
-        products.map(({ id, name, price, img }: Product) => (
+        products.map((product: Product) => (
           <ProductCard
-            key={ id }
-            name={ name }
-            price={ price }
-            img={ img }
+            key={ product.id }
+            product={ product }
           />
         ))
       }</div>

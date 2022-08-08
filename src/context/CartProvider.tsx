@@ -1,12 +1,15 @@
 import { useState, createContext } from 'react';
-import { Product, ReactChildren } from '../helpers/types';
+import { CartContextType, InCartProduct, ReactChildren } from '../helpers/types';
 
-const INITIAL_VALUE = {};
+const INITIAL_VALUE = {
+  cart: [],
+  setCart: () => {},
+};
 
-export const CartContext = createContext(INITIAL_VALUE);
+export const CartContext = createContext<CartContextType>(INITIAL_VALUE);
 
 const CartProvider = ({ children }: ReactChildren) => {
-  const [cart, setCart] = useState<Product[]>([]);
+  const [cart, setCart] = useState<InCartProduct[]>(INITIAL_VALUE.cart);
 
   const contextValue = {
     cart,
