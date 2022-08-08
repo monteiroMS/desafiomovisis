@@ -28,7 +28,12 @@ export type ProductContextType = {
   setQuery: (newState: string) => void,
 };
 
-export type FiltersType = {
+export type PriceFiltersType = {
   from: string,
   until: string,
+};
+
+export type SortFiltersType = {
+  price: string,
+  date: string,
 };

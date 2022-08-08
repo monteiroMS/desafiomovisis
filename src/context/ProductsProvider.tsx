@@ -1,5 +1,5 @@
 import { createContext, useState } from 'react';
-import { FiltersType, Product, ProductContextType, ReactChildren } from '../helpers/types';
+import { PriceFiltersType, Product, ProductContextType, ReactChildren } from '../helpers/types';
 
 const INITIAL_VALUE = {
   products: [{
@@ -24,8 +24,8 @@ const ProductsProvider = ({ children }: ReactChildren) => {
   const [products, setProducts] = useState<Product[]>(INITIAL_VALUE.products);
   const [query, setQuery] = useState<string>(INITIAL_VALUE.query);
   const [loading, setLoading] = useState<Boolean>(INITIAL_VALUE.loading);
-  const [filters, setFilters] = useState<FiltersType>(INITIAL_VALUE.filters);
-
+  const [filters, setFilters] = useState<PriceFiltersType>(INITIAL_VALUE.filters);
+  
   const contextValue = {
     products,
     setProducts,

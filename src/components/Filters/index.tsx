@@ -1,4 +1,5 @@
 import PriceFilter from '../PriceFilter';
+import SortFilter from '../SortFilter';
 import * as Styled from './styles';
 
 const Filters = () => {
@@ -6,7 +7,7 @@ const Filters = () => {
     <Styled.Container>
       <h2>Filtros</h2>
       <PriceFilter />
-      <p>Ordenar</p>
+      <SortFilter />
     </Styled.Container>
   );
 };

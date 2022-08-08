@@ -7,7 +7,7 @@ const PriceFilter = () => {
   const [from, setFrom] = useState<string>('');
   const [until, setUntil] = useState<string>('');
 
-  const handleInput = ({ target: { name, value }}: any) => {
+  const handleInput = ({ target: { name, value } }: any) => {
     if (name === 'from-input') {
       setFrom(value);
     } else {
