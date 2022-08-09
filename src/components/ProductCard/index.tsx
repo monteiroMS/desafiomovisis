@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartProvider';
+import { saveOnLocalStorage } from '../../helpers/localStorageAPI';
 import { ProductPropType } from '../../helpers/types';
 import * as Styled from './styles';
 
@@ -13,9 +14,11 @@ const ProductCard = ({ product }: ProductPropType) => {
       const newProduct = { ...product, quantity: 1 };
       newCart.push(newProduct);
       setCart(newCart);
+      saveOnLocalStorage(newCart);
     } else {
       newCart[index].quantity += 1;
       setCart(newCart);
+      saveOnLocalStorage(newCart);
     }
   };
 
