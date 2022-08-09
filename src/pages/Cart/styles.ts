@@ -6,4 +6,5 @@ export const Container = styled.div`
 
 export const Main = styled.main`
   display: flex;
+  max-width: 1000px;
 `;
