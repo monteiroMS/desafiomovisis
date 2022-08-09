@@ -49,3 +49,8 @@ export type SortFiltersType = {
   price: string,
   date: string,
 };
+
+export type InCartProductPropType = {
+  key: string,
+  product: InCartProduct,
+};

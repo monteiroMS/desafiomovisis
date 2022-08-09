@@ -6,12 +6,11 @@ import * as Styled from './styles';
 const ProductCard = ({ product }: ProductPropType) => {
   const { cart, setCart } = useContext(CartContext);
 
-
   const addToCart = () => {
     const newCart = [...cart];
     const index = newCart.findIndex(({ id }) => product.id === id);
     if (index === -1) {
-      const newProduct = { ...product, quantity: 1 }
+      const newProduct = { ...product, quantity: 1 };
       newCart.push(newProduct);
       setCart(newCart);
     } else {
