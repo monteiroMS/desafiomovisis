@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartProvider';
 import { InCartProduct } from '../../helpers/types';
+import GoBack from '../GoBack';
 
 const Header = () => {
   const { cart } = useContext(CartContext);
@@ -15,18 +16,27 @@ const Header = () => {
     }, 0);
   };
 
+  const isOnCart = () => {
+    const { location: { pathname } } = history;
+    return pathname === '/carrinho';
+  };
+
   return (
     <Styled.Container>
-      <h1>Início</h1>
+      { isOnCart() && <GoBack /> }
+      <h1>Loja online</h1>
       <button
         type="button"
         onClick={ () => history.push('/carrinho') }
+        className="button-cart"
       >
         <img
           src={ shoppingCart }
           alt="carrinho de compras"
         />
-        { itemsInCart() }
+        <Styled.CounterContainer>
+          { itemsInCart() }
+        </Styled.CounterContainer>
       </button>
     </Styled.Container>
   );
