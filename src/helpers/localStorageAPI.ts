@@ -19,6 +19,10 @@ export const saveOnLocalStorage = (newCart: InCartProduct[]) => {
   localStorage.setItem(CART_KEY, JSON.stringify(newCart));
 };
 
+export const clearLocalStorage = () => {
+  localStorage.setItem(CART_KEY, JSON.stringify(EMPTY_CART));
+};
+
 export const getCart = () => {
   const cart = localStorage.getItem(CART_KEY);
   if (cart) return JSON.parse(cart);

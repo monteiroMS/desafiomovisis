@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartProvider';
 import { saveOnLocalStorage } from '../../helpers/localStorageAPI';
+import { beautify } from '../../helpers/patterns';
 import { ProductPropType } from '../../helpers/types';
 import * as Styled from './styles';
 
@@ -9,6 +10,9 @@ const ProductCard = ({ product }: ProductPropType) => {
 
   const addToCart = () => {
     const newCart = [...cart];
+    if (newCart[0].name === 'empty-cart') {
+      newCart.pop();
+    }
     const index = newCart.findIndex(({ id }) => product.id === id);
     if (index === -1) {
       const newProduct = { ...product, quantity: 1 };
@@ -29,7 +33,7 @@ const ProductCard = ({ product }: ProductPropType) => {
         alt={ `produto ${product.name}` }
       />
       <h4>{ product.name }</h4>
-      <p>{ `R$ ${product.price}` }</p>
+      <p>{ `R$ ${beautify(product.price)}` }</p>
       <button
         type="button"
         onClick={ addToCart }

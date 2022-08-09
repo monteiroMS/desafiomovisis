@@ -1,11 +1,10 @@
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartProvider';
-import { saveOnLocalStorage } from '../../helpers/localStorageAPI';
+import { EMPTY_CART, saveOnLocalStorage } from '../../helpers/localStorageAPI';
 import { InCartProductPropType } from '../../helpers/types';
 import * as Styled from './styles';
 import trashCan from '../../images/lixeira.png';
-import minus from '../../images/minus.png';
-import plus from '../../images/plus.png';
+import { beautify } from '../../helpers/patterns';
 
 const InCartProductCard = ({ product }: InCartProductPropType) => {
   const { cart, setCart } = useContext(CartContext);
@@ -15,7 +14,7 @@ const InCartProductCard = ({ product }: InCartProductPropType) => {
     const index = newCart.findIndex(({ id }) => product.id === id);
     if (name === 'plus') {
       newCart[index].quantity += 1;
-    } else if (newCart[index].quantity !== 1) {
+    } else if (name === 'minus' && newCart[index].quantity !== 1) {
       newCart[index].quantity -= 1;
     }
     setCart(newCart);
@@ -25,8 +24,21 @@ const InCartProductCard = ({ product }: InCartProductPropType) => {
   const handleRemove = () => {
     const savedCart = [...cart];
     const newCart = savedCart.filter(({ id }) => id !== product.id);
-    setCart(newCart);
-    saveOnLocalStorage(newCart);
+    if (!newCart.length) {
+      setCart(EMPTY_CART);
+      saveOnLocalStorage(EMPTY_CART);
+    } else {
+      setCart(newCart);
+      saveOnLocalStorage(newCart);
+    }
+  };
+
+  const getPrice = () => {
+    return product.price * product.quantity;
+  };
+
+  const onlyOne = () => {
+    return product.quantity === 1
   };
 
   return (
@@ -36,29 +48,22 @@ const InCartProductCard = ({ product }: InCartProductPropType) => {
         alt={ product.name }
       />
       <p>{ product.name }</p>
-      <p>{ `R$ ${product.price * product.quantity}` }</p>
+      <p>{ `R$ ${beautify(getPrice())}` }</p>
       <button
         type="button"
         onClick={ handleQuantityChange }
         name="minus"
+        disabled={ onlyOne() }
       >
-        <img
-          src={ minus }
-          alt="minus sign"
-          width="20px"
-        />
+        -
       </button>
-      <p>{ `Quantidade ${product.quantity}` }</p>
+      <p>{ `Quantidade: ${product.quantity}` }</p>
       <button
         type="button"
         onClick={ handleQuantityChange }
         name="plus"
       >
-        <img
-          src={ plus }
-          alt="plus sign"
-          width="20px"
-        />
+        +
       </button>
       <button
         type="button"

@@ -38,6 +38,10 @@ export type ProductContextType = {
 export type CartContextType = {
   cart: InCartProduct[],
   setCart: (newState: InCartProduct[]) => void,
+  purchaseStatus: string,
+  setPurchaseStatus: (newState: string) => void,
+  loading: boolean,
+  setLoading: (newState: boolean) => void,
 };
 
 export type PriceFiltersType = {
