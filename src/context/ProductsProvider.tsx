@@ -1,14 +1,16 @@
 import { createContext, useState } from 'react';
 import { PriceFiltersType, Product, ProductContextType, ReactChildren } from '../helpers/types';
 
+export const NO_PRODUCTS = [{
+  id: '0',
+  name: '',
+  entryDate: new Date(),
+  img: '',
+  price: 0,
+}];
+
 const INITIAL_VALUE = {
-  products: [{
-    id: '0',
-    name: '',
-    entryDate: new Date(),
-    img: '',
-    price: 0,
-  }],
+  products: NO_PRODUCTS,
   setProducts: () => {},
   loading: false,
   setLoading: () => {},

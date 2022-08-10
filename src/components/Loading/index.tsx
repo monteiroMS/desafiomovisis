@@ -1,9 +1,13 @@
 import * as Styled from './styles';
+import loading from '../../images/loading.gif';
 
 const Loading = () => {
   return (
     <Styled.Container>
-      <h1>Carregando...</h1>
+      <img
+        src={ loading }
+        alt="animação de loading"
+      />
     </Styled.Container>
   );
 };
