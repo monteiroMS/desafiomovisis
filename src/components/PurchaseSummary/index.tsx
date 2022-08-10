@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { CartContext } from '../../context/CartProvider';
+import { NO_PRODUCTS, ProductsContext } from '../../context/ProductsProvider';
 import { clearLocalStorage, EMPTY_CART } from '../../helpers/localStorageAPI';
 import { beautify } from '../../helpers/patterns';
 import { InCartProduct } from '../../helpers/types';
@@ -8,6 +9,7 @@ import * as Styled from './styles';
 
 const PurchaseSummary = () => {
   const { cart, setCart, setLoading, setPurchaseStatus } = useContext(CartContext);
+  const { setProducts, setQuery } = useContext(ProductsContext);
   const history = useHistory();
 
   const getProductsPrice = () => {
@@ -28,6 +30,8 @@ const PurchaseSummary = () => {
       setCart(EMPTY_CART);
       clearLocalStorage();
       setPurchaseStatus('in-progress');
+      setProducts(NO_PRODUCTS);
+      setQuery('');
       setLoading(false);
       history.push('/');
     }, 1500); // simula o processamento da compra
