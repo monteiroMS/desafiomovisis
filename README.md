@@ -36,6 +36,14 @@ Pronto, já deve ser possível acessar a aplicação pela URL `http://localhost:
 ## Informações adicionais
 
 ### Manipulação de estado
+
   * Foi utilizado o `ContextAPI`, com um contexto para os Produtos e outro contexto para o Carrinho de Compras;
   * O carrinho de compras fica salvo no `Local Storage`;
-  * Toda a estilização da aplicação foi feita para ser vizualizada em uma tela com resolução de 1366x768 pixels. Em outras resoluções, a aplicação pode ser renderizada com seus elementos desalinhados.
+
+### Estilização
+
+ Toda a estilização da aplicação foi feita para ser vizualizada em uma tela com resolução de 1366x768 pixels. Em outras resoluções, a aplicação pode ser renderizada com seus elementos desalinhados.
+  
+### Histórico da construção
+
+ Cada etapa da construção da aplicação está separada nas branches deste repositório.
