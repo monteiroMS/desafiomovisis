@@ -18,12 +18,11 @@ const Cart = () => {
 
   if (purchaseStatus === 'success') {
     return (
-      <Styled.Container>
-        <Header />
+      <Styled.LoadingContainer>
         <Loading />
         <p>Compra realizada com sucesso!</p>
         <p>Redirecionando você para a página inicial em alguns segundos...</p>
-      </Styled.Container>
+      </Styled.LoadingContainer>
     );
   } 
 

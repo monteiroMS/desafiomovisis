@@ -25,3 +25,11 @@ export const Main = styled.main`
   flex-direction: column;
   padding: 20px;
 `;
+
+export const LoadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+`;
