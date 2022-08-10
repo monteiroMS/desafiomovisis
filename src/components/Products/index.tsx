@@ -20,7 +20,7 @@ const Products = () => {
 
   return (
     <Styled.Container>
-      <h1>{ `Exibindo resultados para sua busca por: ${query}` }</h1>
+      <h2>{ `Exibindo resultados para sua busca por: ${query}` }</h2>
       <div className="product-cards-container">{
         products.map((product: Product) => (
           <ProductCard

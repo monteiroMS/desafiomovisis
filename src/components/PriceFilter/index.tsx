@@ -23,6 +23,10 @@ const PriceFilter = () => {
     setUntil('');
   };
 
+  const inputValidation = () => {
+    return from === '' || until === '';
+  }; 
+
   return (
     <Styled.Container>
       <h4>Filtrar por preço</h4>
@@ -51,6 +55,7 @@ const PriceFilter = () => {
       <button
         type="button"
         onClick={ () => handleFilter(from, until) }
+        disabled={ inputValidation() }
       >
         Filtrar
       </button>

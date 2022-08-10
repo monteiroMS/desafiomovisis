@@ -25,12 +25,14 @@ const Search = () => {
   return (
     <Styled.Container>
       <form onSubmit={ (event) => searchFor(event, query) }>
-        <input
-          type="text"
-          value={ query }
-          placeholder="buscar"
-          onChange={ handleSearch }
-        />
+        <Styled.InputContainer>
+          <input
+            type="text"
+            value={ query }
+            placeholder="buscar"
+            onChange={ handleSearch }
+          />
+        </Styled.InputContainer>
       </form>
     </Styled.Container>
   );
