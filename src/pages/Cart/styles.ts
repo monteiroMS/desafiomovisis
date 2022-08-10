@@ -18,7 +18,7 @@ export const ContentContainer = styled.div`
 
 export const Main = styled.main`
   align-self: center;
-  background-color: #ffffe0;
+  background-color: white;
   border: 1px solid lightgray;
   border-radius: 10px;
   display: flex;
