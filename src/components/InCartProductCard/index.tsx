@@ -47,34 +47,41 @@ const InCartProductCard = ({ product }: InCartProductPropType) => {
         src={ product.img }
         alt={ product.name }
       />
-      <p>{ product.name }</p>
-      <p>{ `R$ ${beautify(getPrice())}` }</p>
-      <button
-        type="button"
-        onClick={ handleQuantityChange }
-        name="minus"
-        disabled={ onlyOne() }
-      >
-        -
-      </button>
-      <p>{ `Quantidade: ${product.quantity}` }</p>
-      <button
-        type="button"
-        onClick={ handleQuantityChange }
-        name="plus"
-      >
-        +
-      </button>
-      <button
-        type="button"
-        onClick={ handleRemove }
-      >
-        <img
-          alt="lixeira"
-          src={ trashCan }
-          width="20px"
-        />
-      </button>
+      <Styled.DetailsContainer>
+        <p>{ product.name }</p>
+        <Styled.ButtonsContainer>
+          <p>{ `R$ ${beautify(getPrice())}` }</p>
+          <button
+            type="button"
+            onClick={ handleQuantityChange }
+            name="minus"
+            disabled={ onlyOne() }
+            className="quantity-buttons"
+          >
+            -
+          </button>
+          <p>{ `Quantidade: ${product.quantity}` }</p>
+          <button
+            type="button"
+            onClick={ handleQuantityChange }
+            name="plus"
+            className="quantity-buttons"
+          >
+            +
+          </button>
+          <button
+            type="button"
+            onClick={ handleRemove }
+            className="remove-button"
+          >
+            <img
+              alt="lixeira"
+              src={ trashCan }
+              width="20px"
+            />
+          </button>
+        </Styled.ButtonsContainer>
+      </Styled.DetailsContainer>
     </Styled.ProductCard>
   );
 };

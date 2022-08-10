@@ -49,13 +49,14 @@ const PurchaseSummary = () => {
         <p>Frete</p>
         <p>R$ 20,00</p>
       </Styled.SummaryText>
-      <Styled.SummaryText>
+      <Styled.TotalContainer>
         <h4>Valor Total</h4>
         <p>{ `R$ ${beautify(getTotal())}` }</p>
-      </Styled.SummaryText>
+      </Styled.TotalContainer>
       <button
         type="button"
         onClick={ completePurchase }
+        className="complete-purchase"
       >
         Finalizar Compra
       </button>

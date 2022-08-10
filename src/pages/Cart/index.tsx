@@ -30,7 +30,8 @@ const Cart = () => {
   return (
     <Styled.Container>
       <Header /> 
-      <h1>Checkout</h1>
+      <Styled.Title>Checkout</Styled.Title>
+      <Styled.ContentContainer>
         <Styled.Main>
           {cart[0].name === 'empty-cart' ? <h3>Você ainda não adicionou nada no carrinho :c</h3> : (
               <div className="cart-products-container">
@@ -43,8 +44,9 @@ const Cart = () => {
               </div>
             )
           }
-          <PurchaseSummary />
         </Styled.Main>
+        <PurchaseSummary />
+      </Styled.ContentContainer>
     </Styled.Container>
   );
 };

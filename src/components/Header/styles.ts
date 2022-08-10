@@ -36,6 +36,8 @@ export const Container = styled.header`
 
 export const CounterContainer = styled.div`
   margin: 0;
+  margin-left: -10px;
+  z-index: 0;
   border-radius: 100%;
   color: white;
   text-align: center;
