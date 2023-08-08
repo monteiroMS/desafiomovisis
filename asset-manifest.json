@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/monteiroms.github.io/lojaonline/static/css/main.e6c13ad2.css",
-    "main.js": "/monteiroms.github.io/lojaonline/static/js/main.0eca7310.js",
-    "static/js/787.5210e658.chunk.js": "/monteiroms.github.io/lojaonline/static/js/787.5210e658.chunk.js",
-    "static/media/loading.gif": "/monteiroms.github.io/lojaonline/static/media/loading.0f9a6dfa7ba7b8402847.gif",
-    "static/media/voltar.png": "/monteiroms.github.io/lojaonline/static/media/voltar.5927e70e0dc65cb72739.png",
-    "index.html": "/monteiroms.github.io/lojaonline/index.html",
-    "main.e6c13ad2.css.map": "/monteiroms.github.io/lojaonline/static/css/main.e6c13ad2.css.map",
-    "main.0eca7310.js.map": "/monteiroms.github.io/lojaonline/static/js/main.0eca7310.js.map",
-    "787.5210e658.chunk.js.map": "/monteiroms.github.io/lojaonline/static/js/787.5210e658.chunk.js.map"
+    "main.css": "/monteiroms.github.io/desafio-movisis/static/css/main.e6c13ad2.css",
+    "main.js": "/monteiroms.github.io/desafio-movisis/static/js/main.04fb818c.js",
+    "static/js/787.5210e658.chunk.js": "/monteiroms.github.io/desafio-movisis/static/js/787.5210e658.chunk.js",
+    "static/media/loading.gif": "/monteiroms.github.io/desafio-movisis/static/media/loading.0f9a6dfa7ba7b8402847.gif",
+    "static/media/voltar.png": "/monteiroms.github.io/desafio-movisis/static/media/voltar.5927e70e0dc65cb72739.png",
+    "index.html": "/monteiroms.github.io/desafio-movisis/index.html",
+    "main.e6c13ad2.css.map": "/monteiroms.github.io/desafio-movisis/static/css/main.e6c13ad2.css.map",
+    "main.04fb818c.js.map": "/monteiroms.github.io/desafio-movisis/static/js/main.04fb818c.js.map",
+    "787.5210e658.chunk.js.map": "/monteiroms.github.io/desafio-movisis/static/js/787.5210e658.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.0eca7310.js"
+    "static/js/main.04fb818c.js"
   ]
 }
