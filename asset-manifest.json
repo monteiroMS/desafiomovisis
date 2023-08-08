@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/desafio-movisis/static/css/main.e6c13ad2.css",
-    "main.js": "/desafio-movisis/static/js/main.8088da16.js",
+    "main.js": "/desafio-movisis/static/js/main.d51a397e.js",
     "static/js/787.5210e658.chunk.js": "/desafio-movisis/static/js/787.5210e658.chunk.js",
     "static/media/loading.gif": "/desafio-movisis/static/media/loading.0f9a6dfa7ba7b8402847.gif",
     "static/media/voltar.png": "/desafio-movisis/static/media/voltar.5927e70e0dc65cb72739.png",
     "index.html": "/desafio-movisis/index.html",
     "main.e6c13ad2.css.map": "/desafio-movisis/static/css/main.e6c13ad2.css.map",
-    "main.8088da16.js.map": "/desafio-movisis/static/js/main.8088da16.js.map",
+    "main.d51a397e.js.map": "/desafio-movisis/static/js/main.d51a397e.js.map",
     "787.5210e658.chunk.js.map": "/desafio-movisis/static/js/787.5210e658.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.8088da16.js"
+    "static/js/main.d51a397e.js"
   ]
 }
