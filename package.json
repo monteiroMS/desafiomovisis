@@ -1,6 +1,6 @@
 {
-  "name": "desafio-movisis",
-  "homepage": "https://monteiroms.github.io/desafio-movisis/",
+  "name": "desafiomovisis",
+  "homepage": "desafiomovisis/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

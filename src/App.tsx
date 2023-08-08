@@ -9,8 +9,8 @@ function App() {
   return (
     <Styled.Main>
       <Switch>
-        <Route exact path="/desafio-movisis" component={Home} />
-        <Route path="/desafio-movisis/carrinho" component={Cart} />
+        <Route exact path="/" component={Home} />
+        <Route path="/carrinho" component={Cart} />
         <Route path="/404" component={NotFound} />
         <Redirect to="/404" />
       </Switch>
